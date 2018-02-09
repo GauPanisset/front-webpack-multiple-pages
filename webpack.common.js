@@ -21,6 +21,7 @@ module.exports = {
   entry: {
     login: "./src/login",
     bottles: "./src/bottles",
+    addBottle: "./src/addBottle",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -111,6 +112,12 @@ module.exports = {
       filename: "bottles.html",
       template: "src/bottles/index.html",
       chunks: ["bottles"],
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "addBottle.html",
+      template: "src/addBottle/index.html",
+      chunks: ["addBottle"],
     }),
   ],
 };
